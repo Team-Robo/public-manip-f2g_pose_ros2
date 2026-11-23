@@ -1,0 +1,19 @@
+f2g_pose_node:
+  ros__parameters:
+    f2g_mode: "fusion"            # "fusion" (Option A default) or "direct_head" (Option C)
+    target_label: ""              # Target object name, e.g. "apple", "bottle", "cup"
+    # Leave empty to auto-resolve relative to third_party/F2G-Pose, or specify custom paths:
+    checkpoint: ""
+    config_path: ""
+    radio_repo: ""
+    radio_checkpoint: ""
+    device: "cuda:0"
+    depth_scale: 0.001
+    base_frame: "base_link"
+    head_color_topic: "/camera/head_d455/color/image_raw"
+    head_depth_topic: "/camera/head_d455/depth/image_rect_raw"
+    head_info_topic: "/camera/head_d455/color/camera_info"
+    head_mask_topic: "/perc/head/mask"
+    wrist_cloud_topic: "/perc/grasp/cleaned_points"
+    auto_trigger: false  # Startup trigger only; manual requests remain available.
+    publish_rate_limit: 2.0

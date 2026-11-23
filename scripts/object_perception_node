@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+"""ROS executable: import directly, independent of overlay entry-point metadata."""
+from f2g_pose_ros2.object_perception_node import main
+
+if __name__ == '__main__':
+    main()
